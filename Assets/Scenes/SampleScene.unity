@@ -615,6 +615,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correct_trans: {fileID: 904052370}
+  is_selected: 0
+  is_finshed: 0
+  is_floation: 1
+  floatiion_offsetXY: {x: 1, y: 1}
+  floation_amplitude: 1
+  floation_move_interval: 5
 --- !u!1 &505678750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,6 +2629,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correct_trans: {fileID: 1128834661}
+  is_selected: 0
+  is_finshed: 0
+  is_floation: 0
+  floatiion_offsetXY: {x: 0, y: 0}
+  floation_amplitude: 0
+  floation_move_interval: 0
 --- !u!212 &1427339142
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3009,8 +3021,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0013000965, y: -0.0040500164, z: 0}
-    m_Extent: {x: 2.4965, y: 2.49975, z: 0}
+    m_Center: {x: 0.000099897385, y: -0.00485003, z: 0}
+    m_Extent: {x: 2.4965, y: 2.4995499, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3145,6 +3157,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correct_trans: {fileID: 1447484149}
+  is_selected: 0
+  is_finshed: 0
+  is_floation: 0
+  floatiion_offsetXY: {x: 0, y: 0}
+  floation_amplitude: 0
+  floation_move_interval: 0
 --- !u!212 &1725362375
 SpriteRenderer:
   m_ObjectHideFlags: 0
