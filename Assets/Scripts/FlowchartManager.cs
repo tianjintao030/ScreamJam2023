@@ -3,21 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fungus;
 
-public class FlowchartManager : MonoBehaviour
+public class FlowchartManager : MonoSingleton<FlowchartManager>
 {
     public Flowchart flow_chart;
     public List<string> blocks = new List<string>();
-    private string current_block_name;
 
+    private void Start()
+    {
+        ExecuteBlockByIndex(0);
+    }
+
+    public void ExecuteBlockByIndex(int i)
+    {
+        flow_chart.ExecuteBlock(blocks[i]);
+    }
     
-    public void SetCurrentBlock(int i)
-    {
-        current_block_name = blocks[i];
-    }
-
-    public void ExecuteCurrentBlock()
-    {
-        flow_chart.ExecuteBlock(current_block_name);
-    }
-
 }

@@ -41,10 +41,10 @@ namespace Fungus
         [SerializeField] protected GameObject punchObject;
 
         [Tooltip("Writing characters per second")]
-        [SerializeField] protected float writingSpeed = 60;
+        [SerializeField] protected float writingSpeed = 0.2f;
 
         [Tooltip("Pause duration for punctuation characters")]
-        [SerializeField] protected float punctuationPause = 0.25f;
+        [SerializeField] protected float punctuationPause = 1f;
 
         [Tooltip("Color of text that has not been revealed yet")]
         [SerializeField] protected Color hiddenTextColor = new Color(1,1,1,0);
