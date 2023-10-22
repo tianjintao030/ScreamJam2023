@@ -10,11 +10,18 @@ public class Drag : MonoBehaviour
     public bool is_selected;//是否被选中
     public bool is_finshed;//是否已经完成放置
     private FloatingObj float_obj;
+    [Header("所属阶段")]
+    public int part;
 
     void Start()
     {
         start_pos = transform.position;
         float_obj = GetComponent<FloatingObj>();
+    }
+
+    void Update()
+    {
+        CheckPart();
     }
 
     private void OnMouseDrag()
@@ -58,6 +65,11 @@ public class Drag : MonoBehaviour
             Vector2 current_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector2(current_pos.x, current_pos.y);
         }
+    }
+
+    public void CheckPart()
+    {
+
     }
    
 }

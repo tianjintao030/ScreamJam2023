@@ -12,7 +12,8 @@ public class FloatingObj : MonoBehaviour
     private float tick;
     private float amplitude;//Õñ·ù
     [Header("ÊÇ·ñÆ¯¸¡ÒÆ¶¯")]
-    public bool is_floation;
+    public bool is_floation=true;
+    
 
     void Start()
     {
