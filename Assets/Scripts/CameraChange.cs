@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class CameraChange : MonoBehaviour
 {
     public List<CinemachineVirtualCamera> camera_list = new List<CinemachineVirtualCamera>();
     private int index;
+    public CinemachineVirtualCamera large_camera;
+    private bool is_larging;
+    public GameObject left;
+    public GameObject right;
 
     void Update()
     {
@@ -45,5 +50,24 @@ public class CameraChange : MonoBehaviour
                 camera_list[i].Priority = 1;
             }
         }
+    }
+
+    public void Enlarge()
+    {
+        if(!is_larging)
+        {
+            is_larging = true;
+            large_camera.Priority = 11;
+            left.gameObject.SetActive(false);
+            right.gameObject.SetActive(false);
+        }
+        else if(is_larging)
+        {
+            is_larging = false;
+            large_camera.Priority = 1;
+            left.gameObject.SetActive(true);
+            right.gameObject.SetActive(true);
+        }
+        
     }
 }

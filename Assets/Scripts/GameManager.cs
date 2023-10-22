@@ -15,11 +15,15 @@ public class DragObjConfig
 public class GameManager: MonoSingleton<GameManager>
 {
     public int current_part=1;
+    [Header("电池，用于控制手电灯光效果")]
+    public Drag battery;
+    public GameObject FlashLight2D;
     public List<DragObjConfig> dragObjConfigs = new List<DragObjConfig>();
 
     void Update()
     {
         SetDrapActiveByPart();
+        IsHaveFlashLight();
 
         for(int i=0;i<dragObjConfigs.Count;i++)
         {
@@ -61,6 +65,14 @@ public class GameManager: MonoSingleton<GameManager>
             {
                 dragObjConfigs[i].drag.gameObject.SetActive(true);
             }
+        }
+    }
+
+    public void IsHaveFlashLight()
+    {
+        if(battery.is_finshed)
+        {
+            FlashLight2D.SetActive(true);
         }
     }
 }
