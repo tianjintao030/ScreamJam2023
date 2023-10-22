@@ -12,11 +12,16 @@ public class Drag : MonoBehaviour
     private FloatingObj float_obj;
     [Header("ËùÊô½×¶Î")]
     public int part;
+    public AudioSource _audio;
 
     void Start()
     {
         start_pos = transform.position;
         float_obj = GetComponent<FloatingObj>();
+        if(GetComponent<AudioSource>()!=null)
+        {
+            _audio = GetComponent<AudioSource>();
+        }
     }
 
     void Update()
@@ -69,7 +74,15 @@ public class Drag : MonoBehaviour
 
     public void CheckPart()
     {
-
+        if(GameManager.Instance.current_part>=part)
+        {
+            gameObject.SetActive(true);
+        }
     }
-   
+
+    public void PlayAudio()
+    {
+        _audio.Play();
+    }
+
 }

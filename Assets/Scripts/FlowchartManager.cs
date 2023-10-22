@@ -6,16 +6,11 @@ using Fungus;
 public class FlowchartManager : MonoSingleton<FlowchartManager>
 {
     public Flowchart flow_chart;
-    public List<string> blocks = new List<string>();
 
-    private void Start()
+    public void ExecuteBlockByName(string _name)
     {
-        ExecuteBlockByIndex(0);
-    }
-
-    public void ExecuteBlockByIndex(int i)
-    {
-        flow_chart.ExecuteBlock(blocks[i]);
+        flow_chart.ExecuteBlock(_name);
     }
     
+
 }
