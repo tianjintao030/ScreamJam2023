@@ -229,7 +229,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: -0.861742, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -240,7 +240,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 2.723484, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!1 &27851579
 GameObject:
@@ -348,7 +348,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: -0.2781105, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -359,7 +359,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 1.4326172, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!1 &55589398
 GameObject:
@@ -852,7 +852,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0d7449327361f2419e41075c22080fe, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1194,7 +1194,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d92c576cb4bf72f448c76268f3370256, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1784,7 +1784,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: -0.3682909, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1795,7 +1795,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 1.7365818, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!1 &287859956
 GameObject:
@@ -2210,7 +2210,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 902cae19932402741b10eda7e0539efe, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2626,7 +2626,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bea9872ea3bdf1e4d94dcba51f85292b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3283,8 +3283,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_part: 1
+  one_num: 0
+  two_num: 0
+  three_num: 0
+  four_num: 0
+  five_num: 0
   nums: 000000000000000000000000000000000000000000000000
-  battery: {fileID: 0}
+  battery: {fileID: 450187465}
   FlashLight2D: {fileID: 1626966844}
   button: {fileID: 63988116}
   dragObjConfigs:
@@ -3332,7 +3337,7 @@ MonoBehaviour:
     block_name: DebrisE
     part: 5
     once: 0
-  - drag: {fileID: 0}
+  - drag: {fileID: 918852769}
     block_name: 
     part: 0
     once: 0
@@ -3618,7 +3623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 661.6013, y: 3.3593216}
+  scrollPos: {x: 826.6013, y: -73.64068}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 280
@@ -3676,7 +3681,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -653
     y: 70
-    width: 87
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3766,7 +3771,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -473.8825
     y: 67.72357
-    width: 86
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3840,7 +3845,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -566.64685
     y: 69.723595
-    width: 91
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -3963,7 +3968,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -293.88205
     y: 64.19421
-    width: 86
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4019,7 +4024,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -380.9412
     y: 65.37068
-    width: 93
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4111,7 +4116,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -207.76407
     y: 65.37065
-    width: 86
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4185,7 +4190,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -33.705402
     y: 125.37065
-    width: 93
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4214,7 +4219,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -125.646576
     y: 124.194214
-    width: 95
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4243,7 +4248,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 52.00045
     y: 65.37065
-    width: 95
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4272,7 +4277,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -37.411243
     y: 65.370636
-    width: 94
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4301,7 +4306,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -126.99951
     y: 66.19416
-    width: 94
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4834,7 +4839,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 2
+    floatVal: 1.5
   durationOLD: 0
 --- !u!114 &591603044
 MonoBehaviour:
@@ -4879,7 +4884,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -607.6013
     y: 135.64069
-    width: 77
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -4955,7 +4960,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -513.6013
     y: 134.64069
-    width: 71
+    width: 60
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -5300,7 +5305,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0d7449327361f2419e41075c22080fe, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5588,7 +5593,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: -0.13525772, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5599,7 +5604,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 2.2593613, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!1 &789481056
 GameObject:
@@ -5652,8 +5657,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0015999675, y: -0.001150012, z: 0}
-    m_Extent: {x: 1.3977001, y: 1.40395, z: 0}
+    m_Center: {x: 0.005199969, y: -0.003549993, z: 0}
+    m_Extent: {x: 1.4033, y: 1.4031501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5979,7 +5984,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: -0.09270477, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5990,7 +5995,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 1.556221, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!1 &822398312
 GameObject:
@@ -6116,7 +6121,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: 0.036828995, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6127,7 +6132,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 2.5468216, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!114 &880167179
 MonoBehaviour:
@@ -6239,7 +6244,6 @@ GameObject:
   - component: {fileID: 918852769}
   - component: {fileID: 918852768}
   - component: {fileID: 918852767}
-  - component: {fileID: 918852766}
   m_Layer: 0
   m_Name: FlashLight
   m_TagString: Untagged
@@ -6262,102 +6266,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1055717550}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &918852766
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918852764}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!61 &918852767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6958,7 +6866,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: -0.3090129, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6969,7 +6877,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 1.6180258, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!1 &1206226890
 GameObject:
@@ -7027,7 +6935,7 @@ Transform:
   m_GameObject: {fileID: 1225826753}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.6, y: 0.6, z: 0}
+  m_LocalPosition: {x: -39.24, y: 3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7858,7 +7766,7 @@ Transform:
   m_GameObject: {fileID: 1424196197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.1, y: -0.4, z: 0}
+  m_LocalPosition: {x: 72.55, y: -0.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8351,7 +8259,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 000dfc059540c54468156a6341ff81ab, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8678,7 +8586,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.2584014}
+  m_Offset: {x: 0.4326191, y: 1.2584019}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -8689,7 +8597,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.308945}
+  m_Size: {x: 1.8652382, y: 22.308945}
   m_EdgeRadius: 0
 --- !u!1 &1536873380
 GameObject:
@@ -8817,7 +8725,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e832867bbbbf6c34f900618c4bd2da86, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -9414,7 +9322,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b56c42c58baf7b24a961418a05d4de42, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -9677,7 +9585,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8e72c1f3973135541984b7dff2f32782, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10046,7 +9954,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 775c07b9931008b4aadcc1b49d5ab8ab, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10429,8 +10337,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -156568361
-  m_SortingLayer: 1
+  m_SortingLayerID: -281790743
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 66053263c6bc67645bbb80505d6241a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -10468,7 +10376,7 @@ Transform:
   m_GameObject: {fileID: 2042706623}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 61.2, y: -1, z: 0}
+  m_LocalPosition: {x: 62.09, y: -0.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -10,6 +10,7 @@ public class Drag : MonoBehaviour
     public bool is_selected;//是否被选中
     public bool is_finshed;//是否已经完成放置
     private FloatingObj float_obj;
+    private SpriteRenderer renderer;
     [Header("所属阶段")]
     public int part;
     public AudioSource _audio;
@@ -20,6 +21,7 @@ public class Drag : MonoBehaviour
 
     void Start()
     {
+        renderer = GetComponent<SpriteRenderer>();
         start_pos = transform.position;
         float_obj = GetComponent<FloatingObj>();
         if(GetComponent<AudioSource>()!=null)
@@ -54,9 +56,9 @@ public class Drag : MonoBehaviour
             transform.position = new Vector2(correct_trans.position.x, correct_trans.position.y);
             transform.parent = correct_trans;
             is_finshed = true;
-            if(is_sleep_finshed)
+            if (is_sleep_finshed)
             {
-                gameObject.SetActive(false);
+                renderer.enabled = false;
             }
         }
     }

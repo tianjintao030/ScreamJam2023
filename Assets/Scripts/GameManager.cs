@@ -15,11 +15,11 @@ public class DragObjConfig
 public class GameManager: MonoSingleton<GameManager>
 {
     public int current_part;
-    private int one_num;
-    private int two_num;
-    private int three_num;
-    private int four_num;
-    private int five_num;
+    public int one_num;
+    public int two_num;
+    public int three_num;
+    public int four_num;
+    public int five_num;
     public int[] nums = { 0, 0, 0, 0, 0, 0 };
 
     [Header("电池，用于控制手电灯光效果")]
@@ -72,7 +72,6 @@ public class GameManager: MonoSingleton<GameManager>
                     if (dragObjConfigs[i].drag._audio != null)
                     {
                         dragObjConfigs[i].drag.PlayAudio();
-                        
                     }
                 }
                 dragObjConfigs[i].once = true;
