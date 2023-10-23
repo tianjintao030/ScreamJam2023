@@ -20,7 +20,7 @@ public class GameManager: MonoSingleton<GameManager>
     private int three_num;
     private int four_num;
     private int five_num;
-    private List<int> nums = new List<int>(6);
+    public int[] nums = { 0, 0, 0, 0, 0, 0 };
 
     [Header("电池，用于控制手电灯光效果")]
     public Drag battery;
