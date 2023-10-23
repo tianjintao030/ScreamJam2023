@@ -13,6 +13,10 @@ public class Drag : MonoBehaviour
     [Header("所属阶段")]
     public int part;
     public AudioSource _audio;
+    [Header("放置后是否消失")]
+    public bool is_sleep_finshed;
+    [Header("放置后放置的位置是否消失")]
+    public bool is_pos_sleep_finshed;
 
     void Start()
     {
@@ -50,6 +54,10 @@ public class Drag : MonoBehaviour
             transform.position = new Vector2(correct_trans.position.x, correct_trans.position.y);
             transform.parent = correct_trans;
             is_finshed = true;
+            if(is_sleep_finshed)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 

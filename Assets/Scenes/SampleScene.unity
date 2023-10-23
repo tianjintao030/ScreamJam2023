@@ -513,6 +513,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 1
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!212 &63988117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -729,6 +731,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 6
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!61 &79197285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -894,6 +898,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 4
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!61 &85570160
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1559,6 +1565,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 5
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!82 &319185023
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1931,6 +1939,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 2
   _audio: {fileID: 0}
+  is_sleep_finshed: 1
+  is_pos_sleep_finshed: 0
 --- !u!61 &329653524
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2670,6 +2680,10 @@ MonoBehaviour:
     block_name: DebrisE
     is_part_change: 0
     once: 0
+  - drag: {fileID: 2128201488}
+    block_name: 
+    is_part_change: 0
+    once: 0
   start_audio: {fileID: 572221580}
   end_audio: {fileID: 572221579}
   door_suipian_a: {fileID: 1815930454}
@@ -2964,9 +2978,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 591602994}
+  - {fileID: 591603045}
   selectedCommands:
-  - {fileID: 591602997}
+  - {fileID: 591603043}
   variables:
   - {fileID: 591602992}
   description: 
@@ -4168,7 +4182,7 @@ MonoBehaviour:
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
-    floatVal: 4
+    floatVal: 2
   durationOLD: 0
 --- !u!114 &591603044
 MonoBehaviour:
@@ -4212,7 +4226,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -607.6013
-    y: 136.64069
+    y: 135.64069
     width: 77
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -4590,6 +4604,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 5
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!82 &782064176
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4799,7 +4815,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &789481057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4834,8 +4850,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.0013000369, y: 0.002550006, z: 0}
-    m_Extent: {x: 1.4077001, y: 1.40395, z: 0}
+    m_Center: {x: 0.0017499924, y: 0.0030500293, z: 0}
+    m_Extent: {x: 1.40055, y: 1.4066501, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5206,6 +5222,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 2
   _audio: {fileID: 0}
+  is_sleep_finshed: 1
+  is_pos_sleep_finshed: 1
 --- !u!61 &872996734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6969,6 +6987,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 5
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!212 &1460540432
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7089,6 +7109,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 5
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!82 &1461466612
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7385,6 +7407,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 2
   _audio: {fileID: 0}
+  is_sleep_finshed: 1
+  is_pos_sleep_finshed: 0
 --- !u!61 &1536873384
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8093,6 +8117,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 6
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!61 &1815930455
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8354,6 +8380,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 4
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!61 &1824669211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8556,6 +8584,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 5
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!82 &1953563773
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9024,7 +9054,7 @@ Transform:
   m_GameObject: {fileID: 2128201485}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.258819, w: 0.9659259}
-  m_LocalPosition: {x: -15.700001, y: 5.8, z: 0}
+  m_LocalPosition: {x: -9.82, y: 4.51, z: 0}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9062,6 +9092,8 @@ MonoBehaviour:
   is_finshed: 0
   part: 2
   _audio: {fileID: 0}
+  is_sleep_finshed: 0
+  is_pos_sleep_finshed: 0
 --- !u!61 &2128201489
 BoxCollider2D:
   m_ObjectHideFlags: 0

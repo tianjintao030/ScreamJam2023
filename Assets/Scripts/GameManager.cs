@@ -14,7 +14,7 @@ public class DragObjConfig
 
 public class GameManager: MonoSingleton<GameManager>
 {
-    public int current_part=1;
+    public int current_part;
     [Header("电池，用于控制手电灯光效果")]
     public Drag battery;
     public GameObject FlashLight2D;
@@ -55,16 +55,17 @@ public class GameManager: MonoSingleton<GameManager>
         {
             if(dragObjConfigs[i].drag.is_finshed && !dragObjConfigs[i].once)
             {
+                if (dragObjConfigs[i].is_part_change)
+                {
+                    AudioFinshNextPart(dragObjConfigs[i].drag._audio);
+                }
                 if (dragObjConfigs[i].block_name != null)
                 {
                     FlowchartManager.Instance.ExecuteBlockByName(dragObjConfigs[i].block_name);
                     if (dragObjConfigs[i].drag._audio != null)
                     {
                         dragObjConfigs[i].drag.PlayAudio();
-                        if (dragObjConfigs[i].is_part_change)
-                        {
-                            AudioFinshNextPart(dragObjConfigs[i].drag._audio);
-                        }
+                        
                     }
                 }
                 dragObjConfigs[i].once = true;
@@ -87,7 +88,7 @@ public class GameManager: MonoSingleton<GameManager>
     {
         for (int i = 0; i < dragObjConfigs.Count; i++)
         {
-            if (current_part >= dragObjConfigs[i].drag.part)
+            if (current_part >= dragObjConfigs[i].drag.part && !dragObjConfigs[i].drag.is_finshed)
             {
                 dragObjConfigs[i].drag.gameObject.SetActive(true);
             }
