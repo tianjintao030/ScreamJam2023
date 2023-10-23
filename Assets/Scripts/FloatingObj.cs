@@ -14,7 +14,6 @@ public class FloatingObj : MonoBehaviour
     [Header("是否漂浮移动")]
     public bool is_floation=true;
     
-
     void Start()
     {
         // 如果没有设置频率或者设置的频率为0则自动记录成1
@@ -43,5 +42,13 @@ public class FloatingObj : MonoBehaviour
     public void ResetOriginPos()
     {
         originPosition = transform.localPosition;
+    }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if(coll.tag=="bond")
+        {
+            transform.position = coll.GetComponent<SceneBond>().transmit_pos.position;
+        }
     }
 }
