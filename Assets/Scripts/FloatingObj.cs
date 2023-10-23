@@ -14,7 +14,6 @@ public class FloatingObj : MonoBehaviour
     [Header("是否漂浮移动")]
     public bool is_floation=true;
     
-
     void Start()
     {
         // 如果没有设置频率或者设置的频率为0则自动记录成1
@@ -38,7 +37,6 @@ public class FloatingObj : MonoBehaviour
             // 更新坐标
             transform.localPosition = originPosition + amp;
         }
-        SceneChange();
     }
 
     public void ResetOriginPos()
@@ -46,16 +44,11 @@ public class FloatingObj : MonoBehaviour
         originPosition = transform.localPosition;
     }
 
-    public void SceneChange()
+    private void OnTriggerEnter2D(Collider2D coll)
     {
-        Vector2 world_pos = transform.parent.TransformPoint(transform.position);
-        if (world_pos.x <= GameManager.Instance.left_tag.position.x)
+        if(coll.tag=="bond")
         {
-            transform.position = GameManager.Instance.right_position.position;
-        }
-        if (world_pos.x >= GameManager.Instance.right_tag.position.x)
-        {
-            transform.position = GameManager.Instance.left_position.position;
+            transform.position = coll.GetComponent<SceneBond>().transmit_pos.position;
         }
     }
 }

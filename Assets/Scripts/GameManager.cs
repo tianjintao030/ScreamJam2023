@@ -7,7 +7,7 @@ public class DragObjConfig
 {
     public Drag drag;
     public string block_name;
-    public bool is_part_change;
+    public int part;
     public bool once;
 }
 
@@ -15,6 +15,13 @@ public class DragObjConfig
 public class GameManager: MonoSingleton<GameManager>
 {
     public int current_part;
+    private int one_num;
+    private int two_num;
+    private int three_num;
+    private int four_num;
+    private int five_num;
+    private List<int> nums = new List<int>(6);
+
     [Header("电池，用于控制手电灯光效果")]
     public Drag battery;
     public GameObject FlashLight2D;
@@ -37,14 +44,10 @@ public class GameManager: MonoSingleton<GameManager>
     public GameObject crack;
     [Header("结尾图片")]
     public GameObject end_Image;
-    [Header("左右边界")]
-    public Transform left_tag;
-    public Transform right_tag;
-    public Transform left_position;
-    public Transform right_position;
 
     private void Start()
     {
+        ReadPartConfig();
         GameStart();
     }
 
@@ -60,10 +63,9 @@ public class GameManager: MonoSingleton<GameManager>
         {
             if(dragObjConfigs[i].drag.is_finshed && !dragObjConfigs[i].once)
             {
-                if (dragObjConfigs[i].is_part_change)
-                {
-                    AudioFinshNextPart(dragObjConfigs[i].drag._audio);
-                }
+                nums[dragObjConfigs[i].part]++;
+                CheckIsFinshPart(dragObjConfigs[i].part, nums[dragObjConfigs[i].part]);
+
                 if (dragObjConfigs[i].block_name != null)
                 {
                     FlowchartManager.Instance.ExecuteBlockByName(dragObjConfigs[i].block_name);
@@ -78,15 +80,56 @@ public class GameManager: MonoSingleton<GameManager>
         }
     }
 
-    public void AudioFinshNextPart(AudioSource _audio)
+
+    public void ReadPartConfig()
     {
-        StartCoroutine(ChangeToNextPart(_audio.clip.length));
+        for(int i=0;i<dragObjConfigs.Count;i++)
+        {
+            if(dragObjConfigs[i].part==1)
+            {
+                one_num++;
+            }
+            if(dragObjConfigs[i].part ==2)
+            {
+                two_num++;
+            }
+            if(dragObjConfigs[i].part ==3)
+            {
+                three_num++;
+            }
+            if(dragObjConfigs[i].part ==4)
+            {
+                four_num++;
+            }
+            if(dragObjConfigs[i].part ==5)
+            {
+                five_num++;
+            }
+        }
     }
 
-    public IEnumerator ChangeToNextPart(float time)
+    public void CheckIsFinshPart(int part,int current_finsh_num)
     {
-        yield return new WaitForSecondsRealtime(time);
-        current_part++;
+        if(part==1 && current_finsh_num==one_num)
+        {
+            current_part = 2;
+        }
+        if(part==2 && current_finsh_num==two_num)
+        {
+            current_part = 3;
+        }
+        if(part==3 && current_finsh_num==three_num)
+        {
+            current_part = 4;
+        }
+        if(part==4 && current_finsh_num==four_num)
+        {
+            current_part = 5;
+        }
+        if(part==5 && current_finsh_num==five_num)
+        {
+            current_part = 6;
+        }
     }
 
     public void SetDrapActiveByPart()
