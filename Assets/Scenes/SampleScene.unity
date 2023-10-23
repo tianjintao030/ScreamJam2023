@@ -2539,29 +2539,49 @@ MonoBehaviour:
   battery: {fileID: 872996733}
   FlashLight2D: {fileID: 1626966844}
   dragObjConfigs:
+  - drag: {fileID: 63988116}
+    block_name: Button
+    is_part_change: 1
+    once: 0
   - drag: {fileID: 872996733}
     block_name: Battery
     is_part_change: 1
     once: 0
-  - drag: {fileID: 0}
-    block_name: Button
-    is_part_change: 0
-    once: 0
-  - drag: {fileID: 0}
+  - drag: {fileID: 329653523}
     block_name: Screw
     is_part_change: 0
     once: 0
-  - drag: {fileID: 0}
+  - drag: {fileID: 1536873383}
     block_name: Wrench
     is_part_change: 1
     once: 0
-  - drag: {fileID: 0}
+  - drag: {fileID: 85570159}
     block_name: PipleA
     is_part_change: 0
     once: 0
-  - drag: {fileID: 0}
+  - drag: {fileID: 1824669210}
     block_name: PipleB
     is_part_change: 1
+    once: 0
+  - drag: {fileID: 1460540431}
+    block_name: DebrisA
+    is_part_change: 0
+    once: 0
+  - drag: {fileID: 319185022}
+    block_name: DebrisB
+    is_part_change: 0
+    once: 0
+  - drag: {fileID: 1953563772}
+    block_name: DebrisC
+    is_part_change: 0
+    once: 0
+  - drag: {fileID: 1461466611}
+    block_name: DebrisD
+    is_part_change: 0
+    once: 0
+  - drag: {fileID: 782064175}
+    block_name: DebrisE
+    is_part_change: 0
     once: 0
 --- !u!1 &591602990
 GameObject:
@@ -2581,8 +2601,6 @@ GameObject:
   - component: {fileID: 591603002}
   - component: {fileID: 591603001}
   - component: {fileID: 591603000}
-  - component: {fileID: 591602999}
-  - component: {fileID: 591603004}
   - component: {fileID: 591603006}
   - component: {fileID: 591603005}
   - component: {fileID: 591603011}
@@ -2640,10 +2658,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 952.6013, y: 29.359322}
+  scrollPos: {x: 951.6013, y: 29.359322}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 372.66666
+  blockViewHeight: 280
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -2652,7 +2670,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 591603003}
+  - {fileID: 591602994}
+  - {fileID: 591603022}
   selectedCommands: []
   variables:
   - {fileID: 591602992}
@@ -2696,7 +2715,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -654
-    y: 66
+    y: 68
     width: 87
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2757,45 +2776,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Thanks God. This is GUIDE-043, I grasp your wave. Your energy core is
-    unavailable. Find some tools may help you. God bless you, Jacob.
+  storyText: Thanks God. This is GUIDE-043, I received your distress signal. The
+    energy system on your ship is damaged. Find some tools to help youself.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 0
-  waitForClick: 0
-  stopVoiceover: 0
-  waitForVO: 0
-  setSayDialog: {fileID: 0}
---- !u!114 &591602999
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591602990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 7
-  indentLevel: 0
-  storyText: "Good afternoon citizen, Welcome to the weather forecast. It\u2019s
-    sunny in the Ring area and rainy in the Core, with no sunstorms in the following
-    days. Let's enjoy some music during your work time\uFF0C it\u2019s a song from
-    20 CENTURY, Lead us back to the primitive times about our mother star. ( A Day
-    in the Life)\u2026\u2026"
-  description: 
-  character: {fileID: 0}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 0
   extendPrevious: 0
   fadeWhenDone: 0
   waitForClick: 0
@@ -2863,7 +2851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: Fix the Energy Item.
+  storyText: Fix the Energy system.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -2890,8 +2878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -564.64685
-    y: 68.723595
+    x: -566.64685
+    y: 69.723595
     width: 91
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2903,28 +2891,8 @@ MonoBehaviour:
   commandList:
   - {fileID: 591603002}
   - {fileID: 591603001}
-  - {fileID: 591602999}
-  - {fileID: 591603004}
   - {fileID: 591603037}
   suppressAllAutoSelections: 0
---- !u!114 &591603004
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 591602990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 8
-  indentLevel: 0
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 6
-  durationOLD: 0
 --- !u!114 &591603005
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2957,7 +2925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: the Destination is Earth, our mother star.
+  storyText: The Destination is Earth, our mother star.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3005,8 +2973,8 @@ MonoBehaviour:
   storyText: "Good afternoon citizen, Welcome to the weather forecast. It\u2019s
     sunny in the Ring area and rainy in the Core, with no sunstorms in the following
     days. Let's enjoy some music during your work time\uFF0C it\u2019s a song from
-    20 CENTURY, Lead us back to the primitive times about our mother star. ( A Day
-    in the Life)\u2026\u2026"
+    20 CENTURY, Leading us back to the primitive times when we were still crawling
+    around our mother star. ( A Day in the Life)\u2026\u2026"
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3062,7 +3030,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: 'BROVO, I got where you are ! '
+  storyText: BRAVO, I get where you are now.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3154,7 +3122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: Relax, focus on your work!
+  storyText: Focus on your work!
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3181,7 +3149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -219.76407
+    x: -207.76407
     y: 65.37065
     width: 86
     height: 40
@@ -3228,7 +3196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 25
   indentLevel: 0
-  storyText: Can you see anything that doesn't exist?
+  storyText: Do you see anything strange?
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3255,7 +3223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: -32.705402
+    x: -33.705402
     y: 125.37065
     width: 93
     height: 40
@@ -3418,7 +3386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 27
   indentLevel: 0
-  storyText: We never see eyes to eyes
+  storyText: I can see your face clearly.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -3508,7 +3476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 31
   indentLevel: 0
-  storyText: Time to speed up, Jacob, fix the Main screen. We don't have time.
+  storyText: Time to speed up, fix the Main screen. We are close there.
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
