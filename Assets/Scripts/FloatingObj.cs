@@ -38,10 +38,24 @@ public class FloatingObj : MonoBehaviour
             // ¸üÐÂ×ø±ê
             transform.localPosition = originPosition + amp;
         }
+        SceneChange();
     }
 
     public void ResetOriginPos()
     {
         originPosition = transform.localPosition;
+    }
+
+    public void SceneChange()
+    {
+        Vector2 world_pos = transform.parent.TransformPoint(transform.position);
+        if (world_pos.x <= GameManager.Instance.left_tag.position.x)
+        {
+            transform.position = GameManager.Instance.right_position.position;
+        }
+        if (world_pos.x >= GameManager.Instance.right_tag.position.x)
+        {
+            transform.position = GameManager.Instance.left_position.position;
+        }
     }
 }

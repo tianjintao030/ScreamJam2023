@@ -37,6 +37,11 @@ public class GameManager: MonoSingleton<GameManager>
     public GameObject crack;
     [Header("Ω·Œ≤Õº∆¨")]
     public GameObject end_Image;
+    [Header("◊Û”“±ﬂΩÁ")]
+    public Transform left_tag;
+    public Transform right_tag;
+    public Transform left_position;
+    public Transform right_position;
 
     private void Start()
     {
