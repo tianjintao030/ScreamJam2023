@@ -3020,6 +3020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_part: 1
+  nums: 000000000000000000000000000000000000000000000000
   battery: {fileID: 872996733}
   FlashLight2D: {fileID: 1626966844}
   button: {fileID: 63988116}
