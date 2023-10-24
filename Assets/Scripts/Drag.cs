@@ -7,6 +7,7 @@ public class Drag : MonoBehaviour
     [Header("应该被摆放的正确的位置")]
     public Transform correct_trans;//应该把它正确放置的transform
     private Vector2 start_pos;//初始时的位置
+    public bool can_follow_mouse=true;
     public bool is_selected;//是否被选中
     public bool is_finshed;//是否已经完成放置
     private FloatingObj float_obj;
@@ -39,7 +40,10 @@ public class Drag : MonoBehaviour
     {
         float_obj.is_floation = false;
         is_selected = true;
-        FollowMouse();
+        if(can_follow_mouse)
+        {
+            FollowMouse();
+        }
     }
 
     private void OnMouseUp()
@@ -59,6 +63,10 @@ public class Drag : MonoBehaviour
             if (is_sleep_finshed)
             {
                 renderer.enabled = false;
+            }
+            if(is_pos_sleep_finshed)
+            {
+                correct_trans.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
     }

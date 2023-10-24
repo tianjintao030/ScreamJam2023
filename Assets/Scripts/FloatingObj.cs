@@ -13,9 +13,11 @@ public class FloatingObj : MonoBehaviour
     private float amplitude;//振幅
     [Header("是否漂浮移动")]
     public bool is_floation=true;
+    private Drag drag;
     
     void Start()
     {
+        drag = GetComponent<Drag>();
         // 如果没有设置频率或者设置的频率为0则自动记录成1
         if (Mathf.Approximately(frequency, 0))
             frequency = 1f;
@@ -48,7 +50,17 @@ public class FloatingObj : MonoBehaviour
     {
         if(coll.tag=="bond")
         {
+            is_floation = false;
+            drag.can_follow_mouse = false;
             transform.position = coll.GetComponent<SceneBond>().transmit_pos.position;
+            StartCoroutine(RecoverFloating());
         }
+    }
+
+    IEnumerator RecoverFloating()
+    {
+        yield return new WaitForSeconds(1f);
+        is_floation = true;
+        drag.can_follow_mouse = true;
     }
 }

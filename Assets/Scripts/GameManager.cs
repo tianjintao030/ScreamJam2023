@@ -45,6 +45,18 @@ public class GameManager: MonoSingleton<GameManager>
     [Header("½áÎ²Í¼Æ¬")]
     public GameObject end_Image;
 
+    [Header("¹ÜµÀ")]
+    public Drag blue;
+    public Drag red;
+    public GameObject blue_fix_before_1;
+    public GameObject blue_fix_before_2;
+    public GameObject red_fix_before_1;
+    public GameObject red_fix_before_2;
+    public GameObject blue_fix_after;
+    public GameObject red_fix_after;
+    [Header("Ö²ÎïÑª¼£")]
+    public GameObject plant_blood;
+
     private void Start()
     {
         ReadPartConfig();
@@ -58,8 +70,12 @@ public class GameManager: MonoSingleton<GameManager>
         PartSix();
         CheckEnd();
         HolographyActive();
+        Crack();
+        Piple();
+        PlantBlood();
 
-        for(int i=0;i<dragObjConfigs.Count;i++)
+        #region ÓïÒô£¬×ÖÄ»£¬½×¶ÎÇÐ»»
+        for (int i=0;i<dragObjConfigs.Count;i++)
         {
             if(dragObjConfigs[i].drag.is_finshed && !dragObjConfigs[i].once)
             {
@@ -77,6 +93,7 @@ public class GameManager: MonoSingleton<GameManager>
                 dragObjConfigs[i].once = true;
             }
         }
+        #endregion
     }
 
 
@@ -195,5 +212,29 @@ public class GameManager: MonoSingleton<GameManager>
     {
         yield return new WaitForSecondsRealtime(5f);
         Application.Quit();
+    }
+
+    public void PlantBlood()
+    {
+        if(current_part>=4)
+        {
+            plant_blood.SetActive(true);
+        }
+    }
+
+    public void Piple()
+    {
+        if(blue.is_finshed)
+        {
+            blue_fix_before_1.SetActive(false);
+            blue_fix_before_2.SetActive(false);
+            blue_fix_after.SetActive(true);
+        }
+        if (red.is_finshed)
+        {
+            red_fix_before_1.SetActive(false);
+            red_fix_before_2.SetActive(false);
+            red_fix_after.SetActive(true);
+        }
     }
 }
